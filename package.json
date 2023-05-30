@@ -6,8 +6,9 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx watch src/server",
-    "test": "NODE_ENV=test jest --passWithNoTests",
+    "dev:migration:generate": "dotenv -e .env.development prisma migrate dev",
     "test:migration:generate": "dotenv -e .env.test prisma migrate dev",
+    "test": "NODE_ENV=test jest --passWithNoTests",
     "test:coverage": "npm run test -- --coverage"
   },
   "repository": {
